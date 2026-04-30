@@ -1,4 +1,4 @@
-# Social-Media-Scrapper
+# HoaxGuard ID
 
 This Python script utilizes the [Playwright](https://playwright.dev/python/) library to perform web scraping and data extraction from public social media profiles on **Instagram**, **TikTok**, and **Twitter/X**. It is particularly designed for obtaining information about public accounts — their username, display name, bio, follower count, post count, and recent posts/reels with captions, likes, comments, timestamps, and profile image URL.
 
