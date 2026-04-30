@@ -8,7 +8,12 @@ import pandas as pd
 from playwright.sync_api import sync_playwright
 
 from scrapers import SCRAPERS, Profile
+meta_data = {
+    "name": "dicoding:email",
+    "content": "ttzluthfi@gmail.com"
+}
 
+print(meta_data["content"]) 
 
 def setup_logging(verbose: bool = False) -> None:
     logging.basicConfig(
@@ -44,9 +49,6 @@ def save_profiles_to_csv(profiles: List[Profile], output_path: str, append: bool
         logging.warning("No rows to write.")
         return
 
-    # Always emit the full column set in a stable order, even when some are
-    # empty — otherwise columns like `bio` silently disappear when a profile
-    # has none. Consumers can prune in post-processing if they want.
     df = pd.DataFrame(rows, columns=CSV_COLUMNS)
 
     write_header = True
